@@ -1,0 +1,14 @@
+
+/*
+* Get the complete path of the file that contains the IP address of the DNS server you’re using
+*
+* The Domain Name System (DNS) is the phonebook of the Internet. Humans access information online
+* through domain names, like nytimes.com or espn.com. Web browsers interact through
+* Internet Protocol (IP) addresses. DNS translates domain names to IP addresses so browsers can
+* load Internet resources.
+*
+* scutil --dns | grep nameserver
+* https://docs.oracle.com/cd/E19683-01/817-4843/dnsintro-94/index.html
+*/
+
+/etc/resolv.conf

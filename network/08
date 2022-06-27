@@ -1,0 +1,20 @@
+
+/*
+* Find the provider of who.int
+* web hosting provider: company that manages the servers on which a business's website info is stored.
+*/
+
+/*
+* hostingchecker.com : A user-friendly tool that provides information about the website’s web host,
+* including domain information, domain and site server locations, and IP address.
+*/
+
+- Option 1:
+  Go to hostingchecker.com and type "who.int"
+   It will return the info of the provider, in this case Cloudfare, Inc.
+
+- Option 2:
+  ping who.int to get their IP address, go to whatismyip.com, and search that IP
+
+- Option 3:
+  whois $(ping -c 1 who.int | awk -F"[()]" '{printf $2}') | awk '/OrgName/ {printf}'
