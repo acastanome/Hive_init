@@ -1,0 +1,10 @@
+
+/*
+* Thanks to the previous question and the reverse DNS find the name of your host
+*/
+
+- Full line answer: host $(ipconfig getpacket en0 | grep yiaddr | awk '{printf $3}')
+  6.4.13.10.in-addr.arpa domain name pointer c3r4p6.hive.fi.
+
+- Only host name: host $(ipconfig getpacket en0 | grep yiaddr | awk '{printf $3}') | awk '{printf $NF}'
+  c3r4p6.hive.fi.
