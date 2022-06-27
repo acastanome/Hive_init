@@ -1,0 +1,14 @@
+
+/*
+* Make the intra.42.fr address reroute to 46.19.122.85
+* 
+* Rerouting won't change the destination IP, just redirect to it.
+* NAT (Network Address Translation) changes the destination address, so when network traffic
+* involves a specific network address (10.10.10.10), it gets translated to another address (20.20.20.20).
+*/
+
+- ping intra.42.fr to get its IP address: 163.172.250.12
+- In the file /etc/hosts write: 46.19.122.85	intra.42.fr
+- In the same file, also write: 46.19.122.85	www.intra.42.fr
+- ping intra.42.fr to check the IP address has changed: 46.19.122.85
+NOTE: We don't have the rights to do it in school computers
