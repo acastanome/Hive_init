@@ -1,4 +1,8 @@
 
 /*
 * Find the external IP of 42.fr
+* 	   dig +short 42.fr will return the IP
+* 	   curl ifconfig.me will return my external IP address
 */
+
+163.172.250.16
