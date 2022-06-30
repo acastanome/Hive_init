@@ -1,0 +1,11 @@
+
+/*
+* What file has to be modified to make it permanent?
+*
+* It can be changed with command:
+* 	 hostnamectl set-hostname new-name-here
+*
+* To see the new name displayed you have to reboot, or command: hostname
+*/
+
+/etc/hostname

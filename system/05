@@ -1,0 +1,10 @@
+
+/*
+* Name the command that determines the state of the SSH service.
+*/
+
+- Option 1:
+  systemctl status sshd
+
+- Option 2:
+  service sshd status
