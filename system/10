@@ -1,0 +1,10 @@
+
+/*
+* Name the command that lists the partition tables of drives?
+*/
+
+- Option 1:
+  fdisk -l
+
+- Option 2:
+  sfdisk -l

@@ -1,0 +1,10 @@
+
+/*
+* Figure out the PID of the SSHD service.
+*
+* At sshd startup time its process ID (pid) is written in the /var/run/sshd.pid file.
+* Any adaptation and configuration changes to the sshd can be done in the sshd configuration file sshd_config . It is located in the /etc/ssh directory.
+*
+*/
+
+cat /var/run/sshd.pid

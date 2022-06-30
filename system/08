@@ -1,0 +1,15 @@
+
+/*
+* What file contains the RSA keys of systems that are authorized to connect via SSH?
+*
+* An authorized key in SSH is a public key used for granting login access to users.
+* The authentication mechanism is called public key authentication.
+*
+* Authorized keys are configured separately for each user - usually in the .ssh/authorized_keys file
+* in the user's home directory. However, the location of the keys can be configured in SSH server
+* configuration files, and is often changed to a root-owned location in more secure environments.
+*
+* NOTE: If it hasn't been setup, the file won't exist. (.ssh folder permissions 700 and to authorized_keys permissions 600)
+*/
+
+~/.ssh/authorized_keys
