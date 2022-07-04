@@ -4,3 +4,5 @@
 */
 
 systemctl list-unit-files --type=service --state=enabled --all
+
+Startup services are known as daemons in Linux and Unix-like OS.
