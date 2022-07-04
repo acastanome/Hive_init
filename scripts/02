@@ -1,0 +1,30 @@
+
+#
+# Write a script which delete an ACTIVE user on the VM.
+#
+
+# Check if there is a file called "testingnames.txt". If so, remove it
+if test -f ./testingnames.txt;
+then
+rm ./testingnames.txt
+fi
+
+# Save the active users to a file "testingnames.txt"
+w | awk '/USER/{getline;flag=1;}flag' | awk '{print $1 >> "./testingnames.txt"}'
+
+# Ask for the active user to delete
+echo "What active user do you want to delete?"
+read poorsoul
+
+# go through each line of the file, to see if the username given is indeed an active user
+if (grep -q $poorsoul ./testingnames.txt)
+then
+echo "We would delete the user $poorsoul here"
+#pkill -u $poorsoul && deluser -f $poorsoul NOT WORKING
+else
+echo "$poorsoul is not an active user"
+fi
+
+# Clean-up: Remove the testinfnames.txt file
+rm ./testingnames.txt
+
