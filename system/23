@@ -1,0 +1,32 @@
+
+/*
+* Explain how to connect yourself as new user. (With graphic session and ssh session)
+*/
+
+- With graphic session:
+  - Start the VM
+  - Write the username and password
+
+- Via ssh session:
+  - Change the VM's Network settings:
+  	Adapter 1 attached to Bridged Adapter, OK.
+
+  - Start the VM
+
+  - If you don't have a public key you can use, create one (in your computer) with
+  	keygen <path_filename_where_to_store_new_key>
+	(example: keygen ~/.ssh/id_rsa_init creates the private and public key)
+
+  - If you don't know your VM's ip address:
+  	hostname -I
+
+  - Copy public key from the machine you want to connect from to the VM:
+  	ssh-copy-id -i ~/.ssh/<filename_where_pub_key_is.pub> -p 22 <vm_username>@<public_vm_ip>
+  	(example: ssh-copy-id -i ~/.ssh/id_rsa_init.pub -p 22 alba@10.13.199.237)
+
+  - From the machine you are on, connect to the VM with the command:
+  	ssh -p '22' '<vm_username>@<public_vm_ip>'
+	NOTE: the port for ssh is normally 22 by default
+  	(example: ssh -p '22' 'alba@10.13.199.237')
+
+  - You will be prompted for that usernames password, enter them
