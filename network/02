@@ -21,6 +21,8 @@ ifconfig | grep broadcast | awk 'NR==1 {printf $NF}'
 * (b): Identify all IP addresses which are part of the same subnet
 *
 * arp (Address Resolution Protocol) -a displays all
+* Displays extra ip's from networking:
+* 		   ping -c 2 $(ifconfig | grep broadcast | awk 'NR==1 {printf $NF}') > /dev/null && arp -a | awk -F"[()]" '{print $2}'
 */
 
-ping -c 1 $(ifconfig | grep broadcast | awk 'NR==1 {printf $NF}') > /dev/null && arp -a | awk -F"[()]" '{print $2}'
+ping -c 2 $(ifconfig | grep broadcast | awk 'NR==1 {printf $NF}') | grep time | awk -F" " '{print $4}' | sed 's/.$//' | sort
