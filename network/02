@@ -14,7 +14,7 @@
 * awk NR to get the number of lines (rows), NF to get the number of columns and print the last
 */
 
-ifconfig | grep broadcast | awk 'NR==1 {printf $NF}'
+ifconfig | grep broadcast | awk 'NR==1 {print $NF}'
 
 
 /*
@@ -25,4 +25,4 @@ ifconfig | grep broadcast | awk 'NR==1 {printf $NF}'
 * 		   ping -c 2 $(ifconfig | grep broadcast | awk 'NR==1 {printf $NF}') > /dev/null && arp -a | awk -F"[()]" '{print $2}'
 */
 
-ping -c 2 $(ifconfig | grep broadcast | awk 'NR==1 {printf $NF}') | grep time | awk -F" " '{print $4}' | sed 's/.$//' | sort
+ifconfig | grep broadcast | awk 'NR==1 {print $NF}' && ping -c 2 $(ifconfig | grep broadcast | awk 'NR==1 {print $NF}') | grep time | awk -F" " '{print $4}' | sed 's/.$//' | sort | awk '!seen[$0]++'
