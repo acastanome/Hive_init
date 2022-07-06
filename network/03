@@ -18,4 +18,4 @@
 * grep -A shows N lines after matching pattern. -B N lines before, -C before and after.
 */
 
-networksetup -listallhardwareports | grep -A3 "Hardware Port: Wi-Fi" | awk 'NR==3 {print $NF}'
+networksetup -listallhardwareports | grep -A2 "Hardware Port: Wi-Fi" | awk 'NR==3 {print $NF}'

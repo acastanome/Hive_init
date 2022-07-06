@@ -1,6 +1,6 @@
 
 /*
-* Get the complete path of the file that contains the IP address of the DNS server you’re using
+* 06: Get the complete path of the file that contains the IP address of the DNS server you’re using
 *
 * The Domain Name System (DNS) is the phonebook of the Internet. Humans access information online
 * through domain names, like nytimes.com or espn.com. Web browsers interact through

@@ -1,6 +1,6 @@
 
 /*
-* What file contains the local DNS entries?
+* 14: What file contains the local DNS entries?
 *
 * There is no "cache file" – the cache is kept in memory only. It is maintained by the
 * "DNS Client" service (internally named Dnscache ), therefore the cache data would be somewhere

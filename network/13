@@ -1,6 +1,8 @@
 
 /*
-* Thanks to the previous question and the reverse DNS find the name of your host
+* 13: Thanks to the previous question and the reverse DNS find the name of your host
+*
+* NOTE: run one of the following commands to find the answer for the computer you are on.
 */
 
 - Full line answer: host $(ipconfig getpacket en0 | grep yiaddr | awk '{printf $3}')
