@@ -1,10 +1,10 @@
 
 /*
-* Name the command that lists the partition tables of drives?
+* 10: Name the command that lists the partition tables of drives?
 */
 
 - Option 1:
-  fdisk -l
+  sudo fdisk -l
 
 - Option 2:
-  sfdisk -l
+  sudo sfdisk -l

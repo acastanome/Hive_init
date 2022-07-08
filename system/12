@@ -1,10 +1,11 @@
 
 /*
-* Figure out the exact size of each folder of /var in a humanly understandable way
+* 12: Figure out the exact size of each folder of /var in a humanly understandable way
 * followed by the path of it.
 *
 * du "disk usage", reports on directories, not drives
 * du -sh /var to get total usage of that dir
+* -d1 gives the depth, so not recursively (--max-depth=1)
 */
 
-du -h /var
+sudo du -h -d 1 /var

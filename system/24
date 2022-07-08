@@ -1,6 +1,6 @@
 
 /*
-* Find the command that list all packages
+* 24: Find the command that list all packages
 *
 * dpkg is Debain base of all packages manager
 * apt and apt-get are frontends for dpkg

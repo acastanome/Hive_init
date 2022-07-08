@@ -1,6 +1,6 @@
 
 /*
-* What file contains the RSA keys of systems that are authorized to connect via SSH?
+* 08: What file contains the RSA keys of systems that are authorized to connect via SSH?
 *
 * An authorized key in SSH is a public key used for granting login access to users.
 * The authentication mechanism is called public key authentication.

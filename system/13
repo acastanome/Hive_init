@@ -1,6 +1,6 @@
 
 /*
-* Name the command that find, in real time, currently running processes
+* 13: Name the command that find, in real time, currently running processes
 *
 * ps (process statuses) produces a snapshot of all running processes.
 * Therefore, unlike the Windows task manager, the results are static.
@@ -14,6 +14,8 @@
 * 	the process state code, and the owner of the processes.
 * x option lists all processes not executed from the terminal. A perfect example of
 * 	this are daemons, which are system-related processes that run in the background when the system is booted up.
+*
+* ps a : used in scripts and to pipe info, since top is changing
 */
 
-ps a
+top
