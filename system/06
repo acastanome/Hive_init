@@ -1,6 +1,6 @@
 
 /*
-* Name the command that reboots the SSH service.
+* 06: Name the command that reboots the SSH service.
 */
 
 systemctl restart sshd.service

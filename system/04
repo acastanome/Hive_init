@@ -1,9 +1,11 @@
 
 /*
-* What command gives you the time since your system was last booted?
+* 04: What command gives you the time since your system was last booted?
 *
 * to see hwo booted last and when:
 * 	 who -b
+*
+* uptime -s gives the starting time
 */
 
-uptime -s
+uptime

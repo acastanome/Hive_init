@@ -1,6 +1,6 @@
 
 /*
-* Name the command that determines the state of the SSH service.
+* 05: Name the command that determines the state of the SSH service.
 */
 
 - Option 1:

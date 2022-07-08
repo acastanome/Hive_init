@@ -1,7 +1,12 @@
 
 /*
-* What command can you use to rename your system?
+* 02: What command can you use to rename your system?
 *
 */
 
 hostname <newname>
+
+/* NOTE: You should have sudo rights to do this.
+*  		 Write su and enter root password, then run the command,
+*		 or write sudo before the command
+*/
