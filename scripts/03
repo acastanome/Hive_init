@@ -1,28 +1,25 @@
+#!/bin/bash
 
-# Three’s a Charm. Write a script of you choice.
-# check if a certain user is an active user
-#
+# 03: Three is a Charm. Write a script of you choice.
+# Get the routes at the BK gyms
 
-# Check if there is a file called "testingnames.txt". If so, remove it
-if test -f ./testingnames.txt;
-then
-rm ./testingnames.txt
-fi
+# We will need to have installed:
+# apt-get install w3m
+# apt-get install curl
 
-# Save the active users to a file "testingnames.txt"
-w | awk '/USER/{getline;flag=1;}flag' | awk '{print $1 >> "./testingnames.txt"}'
 
-# Ask for the active user to delete
-echo "Who do you want to check is an active user?"
-read poorsoul
+# Starting info
+echo "Lets check the latest route changes at BK gyms"
 
-# go through each line of the file, to see if the username given is indeed an active user
-if (grep -q $poorsoul ./testingnames.txt)
-then
-echo "$poorsoul is an active user"
-else
-echo "$poorsoul is not an active user"
-fi
+# get the gym names and id's from the bk webpage saved to variables
+names=$(curl --silent 'https://www.boulderkeskus.com/en/page/info/opening_hours/' | grep -B1 gymid | awk -F"[><]" '{if($3) print $3}')
+idarr=($(curl --silent 'https://www.boulderkeskus.com/en/page/info/opening_hours/' | grep gymid | awk -F"\"" '{print $4}'))
 
-# Clean-up: Remove the testinfnames.txt file
-rm ./testingnames.txt
+# For each gym display its name and the latest changed routes (get with gym id from problemator webpage)
+var=0
+for Line in $names
+do
+        echo $Line
+        w3m -dump 'https://www.problemator.fi/t/problemator/embed/newest/?location="'${idarr[var]}'"&amount="10"/'
+        ((var=var+1))
+done
