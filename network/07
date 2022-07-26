@@ -1,14 +1,13 @@
+#!/bin/bash
 
-/*
-* 07: Query an external DNS server on the who.int domain name (ie.: google 8.8.8.8)
-*
-* A DNS query (also known as a DNS request) is a demand for information sent from
-* a user's computer (DNS client) to a DNS server. In most cases a DNS request is sent,
-* to ask for the IP address associated with a domain name.
-*
-* nslookup www.google.com			To make the query about google's IP
-*
-* nslookup who.int clouds.net		clouds.net makes the query about who.int
-*/
+# 07: Query an external DNS server on the who.int domain name (ie.: google 8.8.8.8)
+
+# A DNS query (also known as a DNS request) is a demand for information sent from
+# a user's computer (DNS client) to a DNS server. In most cases a DNS request is sent,
+# to ask for the IP address associated with a domain name.
+#
+# nslookup www.google.com			To make the query about google's IP
+#
+# nslookup who.int clouds.net		clouds.net makes the query about who.int
 
 nslookup who.int clouds.net

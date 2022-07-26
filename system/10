@@ -1,10 +1,11 @@
+#!/bin/bash
 
-/*
-* 10: Name the command that lists the partition tables of drives?
-*/
+# 10: Name the command that lists the partition tables of drives?
+# sfdisk reads and writes partition tables, but is not interactive like fdisk or cfdisk (it reads input from a file or stdin).
+# It's generally used for partitioning drives from scripts or for partition table backup and recovery. It's command driven instead of menu driven
 
-- Option 1:
-  sudo fdisk -l
+# Option 1:
+#  sudo fdisk -l
 
-- Option 2:
+# Option 2:
   sudo sfdisk -l

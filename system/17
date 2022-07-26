@@ -1,13 +1,11 @@
+#!/bin/bash
 
-/*
-* 17: Find the command that allows you to connect via ssh on the VM. (In parallel with the graphic session)
-*
-* ssh-copy-id -i ~/.ssh/id_rsa_init.pub -p 22 alba@10.13.199.237
-* ssh -p '22' 'alba@10.13.199.237'
-*/
+# 17: Find the command that allows you to connect via ssh on the VM. (In parallel with the graphic session)
 
-- First:
-  ssh-copy-id -i ~/.ssh/id_rsa_init.pub -p 22 <vm_username>@<public_vm_ip>
+# First:
+#  ssh-copy-id -i ~/.ssh/id_rsa_init.pub -p 22 <vm_username>@<public_vm_ip>
+ssh-copy-id -i ~/.ssh/id_rsa_init.pub -p 22 alba@10.13.199.237
 
-- Second:
-  ssh -p '22' '<vm_username>@<public_vm_ip>'
+# Second:
+#  ssh -p '22' '<vm_username>@<public_vm_ip>'
+ssh -p '22' 'alba@10.13.199.237'

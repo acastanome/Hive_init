@@ -1,8 +1,7 @@
+#!/bin/bash
 
-/*
-* 09: What command lets you know who is connected to the System?
-*
-* w gives some extra info
-*/
+# 09: What command lets you know who is connected to the System?
+#
+# w gives some extra info
 
 who

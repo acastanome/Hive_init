@@ -1,14 +1,11 @@
+#!/bin/bash
 
-/*
-* 11: Use the output of the previous command to find the name and IP address of
-* the device that makes the link between you (local network) and the outside world
-*/
+# 11: Use the output of the previous command to find the name and IP address of
+# the device that makes the link between you (local network) and the outside world
 
-/*
-* Network Address Translation (NAT) is a process that enables one, unique IP address to represent an entire group of computers.
-* In network address translation, a network device, often a router or NAT firewall, assigns a computer or computers inside a private network a public address.
-* This allows a single device to act as an intermediary or agent between the local, private network and the public network that is the internet.
-* NAT’s main purpose is to conserve the number of public IP addresses in use, for both security and economic goals.
-*/
+# Network Address Translation (NAT) is a process that enables one, unique IP address to represent an entire group of computers.
+# In network address translation, a network device, often a router or NAT firewall, assigns a computer or computers inside a private network a public address.
+# This allows a single device to act as an intermediary or agent between the local, private network and the public network that is the internet.
+# NAT’s main purpose is to conserve the number of public IP addresses in use, for both security and economic goals.
 
 traceroute who.int | grep nat

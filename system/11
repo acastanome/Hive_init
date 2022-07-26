@@ -1,9 +1,8 @@
+#!/bin/bash
 
-/*
-* 11: Name the command that displays the available space left and used on the system
-* in a humanly understandable way
-*
-* df "disk-free"
-*/
+# 11: Name the command that displays the available space left and used on the system
+# in a humanly understandable way
+
+# df "disk-free"
 
 df -h

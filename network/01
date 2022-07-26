@@ -1,4 +1,5 @@
+#!/bin/bash
 
-//01: command to list network interfaces of the machine, without any details. Only names
+# 01: command to list network interfaces of the machine, without any details. Only names
 
 ifconfig -l

@@ -1,16 +1,15 @@
+#!/bin/bash
 
-/*
-* 20: List all existing users on the VM
-*/
+# 20: List all existing users on the VM
 
-- To list all:
-  less /etc/passwd
-  or
-  getent passwd (will display from both /etc/passwd and LDAP[can be used for user authentification] database)
+# To list all:
+#  less /etc/passwd
+#  or
+#  getent passwd (will display from both /etc/passwd and LDAP[can be used for user authentification] database)
 
-- To list only usernames:
+# To list only usernames:
   awk -F: '{print $1}' /etc/passwd
-  or
-  cut -d: -f1 /etc/passwd
-  or
-  compgen -u
+#  or
+#  cut -d: -f1 /etc/passwd
+#  or
+#  compgen -u

@@ -1,28 +1,25 @@
+#!/bin/bash
 
-/*
-* 02: Identify and display the Ethernet interface characteristics
-* Ethernet is a way of connecting computers and other network devices in a physical space.
-* This is often referred to as a local area network or LAN. The idea of an Ethernet network
-* is that computers and other devices can share files, information and data between each other efficiently.
-*/
+# 02: Identify and display the Ethernet interface characteristics
 
-/*
-* (a): Identify broadcast address
-* Broadcast address is an IP address where the host bits are set to 1.
-* This address is used to transmit data to all of the hosts on the local subnet.
-*
-* awk NR to get the number of lines (rows), NF to get the number of columns and print the last
-*/
+# Ethernet is a way of connecting computers and other network devices in a physical space.
+# This is often referred to as a local area network or LAN. The idea of an Ethernet network
+# is that computers and other devices can share files, information and data between each other efficiently.
+
+# (a): Identify broadcast address
+# Broadcast address is an IP address where the host bits are set to 1.
+# This address is used to transmit data to all of the hosts on the local subnet.
+#
+# awk NR to get the number of lines (rows), NF to get the number of columns and print the last
 
 ifconfig | grep broadcast | awk 'NR==1 {print $NF}'
 
 
-/*
-* (b): Identify all IP addresses which are part of the same subnet
-*
-* arp (Address Resolution Protocol) -a displays all
-* Displays extra ip's from networking:
-* 		   ping -c 2 $(ifconfig | grep broadcast | awk 'NR==1 {printf $NF}') > /dev/null && arp -a | awk -F"[()]" '{print $2}'
-*/
+
+# (b): Identify all IP addresses which are part of the same subnet
+#
+# arp (Address Resolution Protocol) -a displays all
+# Displays extra ip's from networking:
+# 		   ping -c 2 $(ifconfig | grep broadcast | awk 'NR==1 {printf $NF}') > /dev/null && arp -a | awk -F"[()]" '{print $2}'
 
 ifconfig | grep broadcast | awk 'NR==1 {print $NF}' && ping -c 2 $(ifconfig | grep broadcast | awk 'NR==1 {print $NF}') | grep time | awk -F" " '{print $4}' | sed 's/.$//' | sort | awk '!seen[$0]++'

@@ -1,10 +1,9 @@
+#!/bin/bash
 
-/*
-* 05: Name the command that determines the state of the SSH service.
-*/
+# 05: Name the command that determines the state of the SSH service.
 
-- Option 1:
+# Option 1:
   systemctl status sshd
 
-- Option 2:
-  service sshd status
+# Option 2:
+#  service sshd status

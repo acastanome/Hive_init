@@ -1,11 +1,10 @@
+#!/bin/bash
 
-/*
-* 04: What command gives you the time since your system was last booted?
-*
-* to see hwo booted last and when:
-* 	 who -b
-*
-* uptime -s gives the starting time
-*/
+# 04: What command gives you the time since your system was last booted?
+
+# to see who booted last and when:
+# 	 who -b
+#
+# uptime -s gives the starting time
 
 uptime

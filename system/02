@@ -1,9 +1,8 @@
+#!/bin/bash
 
-/*
-* 02: What command can you use to rename your system?
-*
-* NOTE: You should have sudo rights to do this. You can also, instead of sudo, write su, enter, root password
-* 		Then run hostname <newname>
-*/
+# 02: What command can you use to rename your system?
+
+# NOTE: You should have sudo rights to do this. You can also, instead of sudo, write su, enter, root password
+# 		Then run hostname <newname>
 
 sudo hostname <newname>

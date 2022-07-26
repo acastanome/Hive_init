@@ -1,13 +1,12 @@
+#!/bin/bash
 
-/*
-* 22: Find the command that add a new local user
-*
-* To delete, also the home folder (with sudo rights): deluser --remove-home <user_name>
-* To delete user and all associated files (with sudo rights): deluser --remove-all-files <user_name>
-*/
+# 22: Find the command that add a new local user
 
-- To add a normal user:
+# To delete, also the home folder (with sudo rights): deluser --remove-home <user_name>
+# To delete user and all associated files (with sudo rights): deluser --remove-all-files <user_name>
+
+# To add a normal user:
   sudo adduser <user_name>
 
-- To add a system user:
-  sudo adduser --system <user_name>
+# To add a system user:
+#  sudo adduser --system <user_name>

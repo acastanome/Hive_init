@@ -1,8 +1,7 @@
+#!/bin/bash
 
-/*
-* 05: Identify IP address of the DNS that responds to the following url: who.int
-*
-* dig - DNS lookup utility		+short prints in non-verbose
-*/
+# 05: Identify IP address of the DNS that responds to the following url: who.int
+
+# dig - DNS lookup utility		+short prints in non-verbose
 
 dig +short who.int

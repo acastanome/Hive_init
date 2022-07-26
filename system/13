@@ -1,21 +1,20 @@
+#!/bin/bash
 
-/*
-* 13: Name the command that find, in real time, currently running processes
-*
-* ps (process statuses) produces a snapshot of all running processes.
-* Therefore, unlike the Windows task manager, the results are static.
-*
-* Without any argument or option: returns a list of running processes along with
-* four crucial columns: the PID, terminal name (TTY), running time (TIME), and the
-* name of the command that launches the process (CMD). For more info about your running processes:
-*
-* a option outputs all running processes of all users in the system.
-* u option provides additional information like memory and CPU usage percentage,
-* 	the process state code, and the owner of the processes.
-* x option lists all processes not executed from the terminal. A perfect example of
-* 	this are daemons, which are system-related processes that run in the background when the system is booted up.
-*
-* ps a : used in scripts and to pipe info, since top is changing
-*/
+# 13: Name the command that find, in real time, currently running processes
+
+# ps (process statuses) produces a snapshot of all running processes.
+# Therefore, unlike the Windows task manager, the results are static.
+#
+# Without any argument or option: returns a list of running processes along with
+# four crucial columns: the PID, terminal name (TTY), running time (TIME), and the
+# name of the command that launches the process (CMD). For more info about your running processes:
+#
+# a option outputs all running processes of all users in the system.
+# u option provides additional information like memory and CPU usage percentage,
+#     the process state code, and the owner of the processes.
+# x option lists all processes not executed from the terminal. A perfect example of
+#     this are daemons, which are system-related processes that run in the background when the system is booted up.
+#
+# ps a : used in scripts and to pipe info, since top is changing
 
 top

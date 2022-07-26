@@ -1,21 +1,19 @@
+#!/bin/bash
 
-/*
-* 03: Identify the MAC address of the Wi-Fi card
-* Media Access Control (MAC) address is a unique numeric identifier used to distinguish a device from others on a network. The address is assigned by the manufacturer, for Ethernet and Wi-Fi cards.
+# 03: Identify the MAC address of the Wi-Fi card
 
-* On systems with both an ethernet and wireless connection, en0 will be your ethernet interface
-* and en1 will be your wireless interface. A MAC address will be shown for both en0 and en1 and
-* likely labelled as “ether”.
-* On systems with just a wireless connection, en0 will be your wireless interface.
-*/
+# Media Access Control (MAC) address is a unique numeric identifier used to distinguish a device
+# from others on a network. The address is assigned by the manufacturer, for Ethernet and Wi-Fi cards.
+#
+# On systems with both an ethernet and wireless connection, en0 will be your ethernet interface
+# and en1 will be your wireless interface. A MAC address will be shown for both en0 and en1 and
+# likely labelled as “ether”.
+#
+# On systems with just a wireless connection, en0 will be your wireless interface.
+#
+# Decided not to use because in some computers the Wi-Fi cards MAC address is en0
+# ifconfig en1 | grep ether | awk '{printf $2}'
 
-/*
-* Decided not to use because in some computers the Wi-Fi cards MAC address is en0
-* ifconfig en1 | grep ether | awk '{printf $2}'
-*/
-
-/*
-* grep -A shows N lines after matching pattern. -B N lines before, -C before and after.
-*/
+# grep -A shows N lines after matching pattern. -B N lines before, -C before and after.
 
 networksetup -listallhardwareports | grep -A2 "Hardware Port: Wi-Fi" | awk 'NR==3 {print $NF}'

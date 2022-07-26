@@ -1,8 +1,8 @@
+#!/bin/bash
 
-/*
-* 09: Find the external IP of 42.fr
-* 	   dig +short 42.fr will return the IP of 42.fr
-* 	   curl ifconfig.me will return my external IP address
-*/
+# 09: Find the external IP of 42.fr
+
+#   dig +short 42.fr will return the IP of 42.fr
+#   curl ifconfig.me will return my external IP address
 
 163.172.250.16

@@ -1,9 +1,8 @@
+#!/bin/bash
 
-/*
-* 24: Find the command that list all packages
-*
-* dpkg is Debain base of all packages manager
-* apt and apt-get are frontends for dpkg
-*/
+# 24: Find the command that list all packages
+
+# dpkg is Debain base of all packages manager
+# apt and apt-get are frontends for dpkg
 
 dpkg -l

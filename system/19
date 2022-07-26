@@ -1,8 +1,7 @@
+#!/bin/bash
 
-/*
-* 19: List all services which are started at boot time and name this kind of services
-*/
+# 19: List all services which are started at boot time and name this kind of services
 
 systemctl list-unit-files --type=service --state=enabled --all
 
-Startup services are known as daemons in Linux and Unix-like OS.
+# ANSWER: Startup services are known as daemons in Linux and Unix-like OS.

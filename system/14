@@ -1,8 +1,7 @@
+#!/bin/bash
 
-/*
-* 14: Run the ‘tail -f /var/log/syslog‘ command in background
-*
-* & after the command makes it run in the background
-*/
+# 14: Run the ‘tail -f /var/log/syslog‘ command in background
+#
+# & after the command makes it run in the background
 
 sudo tail -f /var/log/syslog &

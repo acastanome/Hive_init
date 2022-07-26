@@ -1,15 +1,15 @@
+#!/bin/bash
 
-/*
-* 01: In what file can you find the installed version of your Debian?
-*
-* cat /etc/debian_version
-*   Debian version number (11.3)
-*
-* - cat /etc/issue
-*   Text file with message or system identification information (Debian GNU/Linux 11)
-*
-* - cat /etc/os-release
-*   New configuration file introduced in systemd, which contains system identification data, and only available in newer Debian distributions.
-*/
+# 01: In what file can you find the installed version of your Debian?
+
+# cat /etc/debian_version
+#   Debian version number (11.3)
+#
+# cat /etc/issue
+#   Text file with message or system identification information (Debian GNU/Linux 11)
+#
+# cat /etc/os-release
+#   New configuration file introduced in systemd, which contains system identification data, and only available in newer Debian distributions.
+#
 
 /etc/debian_version

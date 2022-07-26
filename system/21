@@ -1,18 +1,16 @@
+#!/bin/bash
 
-/*
-* 21: List all real users on the VM
-*
-* User accounts are given a numeric ID. Usually, regular human accounts start at 1000, and system, non-human, at 0.
-* The ID of the root account is 0.
-*
-* Linux keeps track of the min and max values using configuration parameters called UID_MIN and UID_MAX,
-* 		held in the “/etc/login.defs” file.
-*	To find them: grep -E '^UID_MIN|^UID_MAX' /etc/login.defs
-*
-*/
+# 21: List all real users on the VM
 
-- Option 1, slow, checks all numbers:
-  getent passwd {1000..60000}
+# User accounts are given a numeric ID. Usually, regular human accounts start at 1000, and system, non-human, at 0.
+# The ID of the root account is 0, and it isn't counted as a real user.
+#
+# Linux keeps track of the min and max values using configuration parameters called UID_MIN and UID_MAX,
+# 		held in the “/etc/login.defs” file.
+#	To find them: grep -E '^UID_MIN|^UID_MAX' /etc/login.defs
 
-- Option 2 (substitute 1000 and 60000 for the UID_MIN and UID_MAX respectively):
+# Option 1, slow, checks all numbers:
+#  getent passwd {1000..60000}
+
+# Option 2 (substitute 1000 and 60000 for the UID_MIN and UID_MAX respectively):
   awk -F: '{if ($3 >= 1000 && $3 <= 60000) print $1}' /etc/passwd

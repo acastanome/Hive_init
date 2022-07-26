@@ -1,6 +1,5 @@
+#!/bin/bash
 
-/*
-* 06: Name the command that reboots the SSH service.
-*/
+# 06: Name the command that reboots the SSH service.
 
 sudo systemctl restart sshd.service
